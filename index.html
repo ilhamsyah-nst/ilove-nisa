@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arda Baitunnisa Siregar | Guru Pesantren</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #ffe6f0, #fff5d1, #e0ffe5);
+      overflow-x: hidden;
+      color: #333;
+      position: relative;
+    }
+
+    header {
+      text-align: center;
+      padding: 80px 20px;
+      position: relative;
+      z-index: 2;
+    }
+
+    header h1 {
+      font-size: 2.8em;
+      color: #e14b8c;
+      text-shadow: 0 0 10px rgba(255, 0, 100, 0.2);
+      animation: glow 3s ease-in-out infinite alternate;
+    }
+
+    header p {
+      font-size: 1.2em;
+      color: #444;
+      margin-top: 10px;
+    }
+
+    @keyframes glow {
+      from { text-shadow: 0 0 10px #fbb1bd; }
+      to { text-shadow: 0 0 20px #ff80ab; }
+    }
+
+    .profile {
+      text-align: center;
+      margin: 40px 0;
+      position: relative;
+      z-index: 2;
+    }
+
+    .profile img {
+      width: 260px;
+      height: 260px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 5px solid #ffb6c1;
+      box-shadow: 0 0 20px rgba(255, 182, 193, 0.6);
+      animation: float 4s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-8px); }
+    }
+
+    section {
+      max-width: 700px;
+      background: rgba(255, 255, 255, 0.8);
+      margin: 30px auto;
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 0 25px rgba(0, 0, 0, 0.1);
+      position: relative;
+      z-index: 2;
+      animation: fadeUp 1s ease-in;
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    section h2 {
+      color: #e14b8c;
+      margin-bottom: 15px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    section h2::before {
+      content: "🌺";
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      background: rgba(255,255,255,0.7);
+      font-size: 0.9em;
+      color: #555;
+      position: relative;
+      z-index: 2;
+    }
+
+    /* ========== BUNGA TERBANG ========== */
+    .flower {
+      position: fixed;
+      top: -50px;
+      width: 30px;
+      height: 30px;
+      background-size: cover;
+      opacity: 0.9;
+      animation: fall linear infinite;
+      z-index: 1;
+    }
+
+    @keyframes fall {
+      0% { transform: translateY(0) rotate(0deg); }
+      100% { transform: translateY(110vh) rotate(360deg); }
+    }
+
+    /* Tombol kontrol musik */
+    .music-control {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #fff0f5;
+      border-radius: 50%;
+      box-shadow: 0 0 15px rgba(255,105,180,0.4);
+      width: 60px;
+      height: 60px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      transition: 0.3s;
+      z-index: 5;
+    }
+
+    .music-control:hover {
+      transform: scale(1.1);
+      background: #ffe6ef;
+    }
+
+    .music-control img {
+      width: 30px;
+      height: 30px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Arda Baitunnisa Siregar</h1>
+    <p>Guru Pesantren • Inspiratif • Islami Modern</p>
+    <p class="quran">“Allah akan meninggikan orang-orang yang beriman di antara kamu dan orang-orang yang diberi ilmu pengetahuan beberapa derajat.” <br><em>(QS. Al-Mujādilah: 11)</em></p>
+  </header>
+
+  <div class="profile">
+    <img src="nisa1.jpg" alt="Foto Profil">
+  </div>
+
+  <section>
+    <h2>Tentang Saya</h2>
+    <p>Saya Arda Baitunnisa Siregar, seorang pendidik di pesantren yang memiliki semangat untuk membentuk generasi muda yang berakhlak mulia dan berwawasan luas.  
+      Berpengalaman dalam mengajar serta mengembangkan metode pembelajaran Islami modern yang menyenangkan dan inspiratif.</p>
+  </section>
+
+  <section>
+    <h2>Sedikit Kata-kata dari Sahabat</h2>
+    <p>- "Telanlah amarahmu sebab kau tidak pernah menemukan minuman yang dapat meninggalkan rasa lebih manis dan lebih lezat daripada itu."<br><em>- Ali bin Abi Thalib</em></p>
+  </section>
+
+  <section>
+    <h2>Kontak</h2>
+    <div class="contact">
+      <a href="mailto:ardabaitunn@gmail.com">📧 Email</a><br>
+      <a href="https://instagram.com/arda_baitunnisa" target="_blank">📸 Instagram</a><br>
+      <a href="https://facebook.com/ardbtnnsa" target="_blank">💙 Facebook</a>
+    </div>
+  </section>
+
+  <footer>
+    © 2025 Arda Baitunnisa Siregar | Guru Pesantren 🌸
+  </footer>
+
+  <!-- Musik otomatis -->
+  <audio id="bg-music" src="musik.mp3" autoplay loop></audio>
+
+  <!-- Tombol kontrol musik -->
+  <div class="music-control" onclick="toggleMusic()">
+    <img id="music-icon" src="https://cdn-icons-png.flaticon.com/512/727/727240.png" alt="Musik">
+  </div>
+
+  <!-- Efek bunga melayang -->
+  <script>
+    const flowers = [
+      'https://i.ibb.co/XSpPff3/flower1.png',
+      'https://i.ibb.co/7nsnKrF/flower2.png',
+      'https://i.ibb.co/dc4ZbqW/flower3.png',
+      'https://i.ibb.co/2y8xS4K/flower4.png'
+    ];
+
+    for (let i = 0; i < 25; i++) {
+      let f = document.createElement('div');
+      f.className = 'flower';
+      f.style.left = Math.random() * 100 + 'vw';
+      f.style.animationDuration = (8 + Math.random() * 7) + 's';
+      f.style.animationDelay = Math.random() * 5 + 's';
+      f.style.backgroundImage = `url(${flowers[Math.floor(Math.random()*flowers.length)]})`;
+      document.body.appendChild(f);
+    }
+
+    // Kontrol musik
+    const music = document.getElementById("bg-music");
+    const icon = document.getElementById("music-icon");
+
+    function toggleMusic() {
+      if (music.paused) {
+        music.play();
+        icon.src = "https://cdn-icons-png.flaticon.com/512/727/727240.png";
+      } else {
+        music.pause();
+        icon.src = "https://cdn-icons-png.flaticon.com/512/565/565313.png";
+      }
+    }
+  </script>
+</body>
+</html>
